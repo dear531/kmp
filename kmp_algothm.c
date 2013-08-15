@@ -1,6 +1,6 @@
 #include <stdio.h>
 char p[] = "abcddddddddabcddd7777";
-#define CHILDREN_LEN	sizeof(p) / sizeof(*p)	
+#define CHILDREN_LEN	(sizeof(p) / sizeof(*p) - 1)
 int m = CHILDREN_LEN;
 int b[CHILDREN_LEN + 1] = {0};
 void kmpGetNext(void)
@@ -19,7 +19,7 @@ void kmpGetNext(void)
 	return;
 }
 char t[] = "adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkdsa";
-#define MOTHER_LEN	sizeof(t) / sizeof(*t)
+#define MOTHER_LEN	(sizeof(t) / sizeof(*t) - 1)
 int n = MOTHER_LEN;
 void kmpSearch(void)
 {
@@ -31,7 +31,7 @@ void kmpSearch(void)
 		printf("i:%d\tj:%d\n", i, j);
 		if (j==m)
 		{
-			printf("\nposition:%d\n", i - j);
+			printf("position:%d\n", i - j);
 			j=b[j];
 		}
 	}
