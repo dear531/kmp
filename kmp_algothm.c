@@ -18,7 +18,7 @@ void kmpGetNext(void)
 	printf("m:%d\n", m);
 	return;
 }
-char t[] = "adjkafjdabcdddksadsaabcddddddddabcdddcccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkdsa";
+char t[] = "adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkdsa";
 #define MOTHER_LEN	sizeof(t) / sizeof(*t)
 int n = MOTHER_LEN;
 void kmpSearch(void)
