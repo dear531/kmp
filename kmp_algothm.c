@@ -38,10 +38,29 @@ void kmpSearch(void)
 	printf("n:%d\n", n);
 	return;
 }
+char t2[] = "1adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkds";
+void kmpSearch2(void)
+{
+	int i=0, j=0;
+	while (i<n)
+	{
+		while (j>=0 && t2[i]!=p[j]) j=b[j];
+		i++; j++;
+		printf("i:%d\tj:%d\n", i, j);
+		if (j==m)
+		{
+			printf("position:%d\n", i - j);
+			j=b[j];
+		}
+	}
+	printf("n:%d\n", n);
+	return;
+}
 
 int main(int argc, char *argv[])
 {
 	kmpGetNext();
 	kmpSearch();
+	kmpSearch2();
 	return 0;
 }
