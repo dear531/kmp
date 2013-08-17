@@ -32,6 +32,7 @@ void kmpSearch(void)
 		if (j==m)
 		{
 			printf("position:%d\n", i - j);
+			printf("t:%s\n", &t[i - j]);
 			j=b[j];
 		}
 	}
