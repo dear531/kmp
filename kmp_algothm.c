@@ -5,17 +5,25 @@ int m = CHILDREN_LEN;
 int b[CHILDREN_LEN + 1] = {0};
 void kmpGetNext(void)
 {
-	int i=0, j=-1;
-	b[i]=j;
-	while (i<m)
+	int i = 0, j = -1;
+	b[i] = j;
+	while (i < m)
 	{
-		while (j>=0 && p[i]!=p[j]) j=b[j];
+		while (j >= 0 && p[i] != p[j])
+			j = b[j];
+#if 1
 	printf("i:%d\tj:%d\t", i, j);
-		i++; j++;
-		b[i]=j;
+#endif
+		i++;
+		j++;
+		b[i] = j;
+#if 1
 	printf("b[%d]:%d\n", i, b[i]);
+#endif
 	}
+#if 1
 	printf("m:%d\n", m);
+#endif
 	return;
 }
 char t[] = "adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkdsa";
@@ -23,38 +31,54 @@ char t[] = "adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdd
 int n = MOTHER_LEN;
 void kmpSearch(void)
 {
-	int i=0, j=0;
-	while (i<n)
+	int i = 0, j = 0;
+	while (i < n)
 	{
-		while (j>=0 && t[i]!=p[j]) j=b[j];
-		i++; j++;
+		while (j >= 0 && t[i] !=p [j])
+			j =b [j];
+		i++;
+		j++;
+#if 1
 		printf("i:%d\tj:%d\n", i, j);
-		if (j==m)
+#endif
+		if (j == m)
 		{
+#if 1
 			printf("position:%d\n", i - j);
 			printf("t:%s\n", &t[i - j]);
-			j=b[j];
+#endif
+			j = b[j];
 		}
 	}
+#if 1
 	printf("n:%d\n", n);
+#endif
 	return;
 }
 char t2[] = "1adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkds";
 void kmpSearch2(void)
 {
-	int i=0, j=0;
-	while (i<n)
+	int i = 0, j = 0;
+	while (i < n)
 	{
-		while (j>=0 && t2[i]!=p[j]) j=b[j];
-		i++; j++;
+		while (j >= 0 && t2[i] !=p [j])
+			j = b[j];
+		i++;
+		j++;
+#if 1
 		printf("i:%d\tj:%d\n", i, j);
-		if (j==m)
+#endif
+		if (j == m)
 		{
+#if 1
 			printf("position:%d\n", i - j);
-			j=b[j];
+#endif
+			j = b[j];
 		}
 	}
+#if 1
 	printf("n:%d\n", n);
+#endif
 	return;
 }
 
