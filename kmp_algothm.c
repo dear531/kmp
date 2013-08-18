@@ -1,8 +1,8 @@
 #include <stdio.h>
-char p[] = "abcddddddddabcddd7777";
+char p[] = "abcddddabcddd7777";
 #define CHILDREN_LEN	(sizeof(p) / sizeof(*p) - 1)
 int m = CHILDREN_LEN;
-int b[CHILDREN_LEN + 1] = {0};
+int b[CHILDREN_LEN] = {0};
 void kmpGetNext(void)
 {
 	int i = 0, j = -1;
@@ -26,7 +26,7 @@ void kmpGetNext(void)
 #endif
 	return;
 }
-char t[] = "adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkdsa";
+char t[] = "adsaabcddddabcddd7777cccfdabcddddabcddd777saabcddddabcddd7777abcddddabcddd7777fdkdsa";
 #define MOTHER_LEN	(sizeof(t) / sizeof(*t) - 1)
 int n = MOTHER_LEN;
 void kmpSearch(void)
@@ -55,7 +55,7 @@ void kmpSearch(void)
 #endif
 	return;
 }
-char t2[] = "1adjkafjdabcdddksadsaabcddddddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkds";
+char t2[] = "1adjkafjdabcdddksadsaabcddddabcddd77777cccfdsafdsafdjsakfdsaabcdddfdsafdsajfkdsajlfkds";
 void kmpSearch2(void)
 {
 	int i = 0, j = 0;
