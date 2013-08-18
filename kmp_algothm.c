@@ -11,17 +11,17 @@ void kmpGetNext(void)
 	{
 		while (j >= 0 && p[i] != p[j])
 			j = b[j];
-#if 1
+#if 0
 	printf("i:%d\tj:%d\t", i, j);
 #endif
 		i++;
 		j++;
 		b[i] = j;
-#if 1
+#if 0
 	printf("b[%d]:%d\n", i, b[i]);
 #endif
 	}
-#if 1
+#if 0
 	printf("m:%d\n", m);
 #endif
 	return;
@@ -38,19 +38,19 @@ void kmpSearch(void)
 			j =b [j];
 		i++;
 		j++;
-#if 1
+#if 0
 		printf("i:%d\tj:%d\n", i, j);
 #endif
 		if (j == m)
 		{
-#if 1
+#if 0
 			printf("position:%d\n", i - j);
 			printf("t:%s\n", &t[i - j]);
 #endif
 			j = b[j];
 		}
 	}
-#if 1
+#if 0
 	printf("n:%d\n", n);
 #endif
 	return;
@@ -65,18 +65,18 @@ void kmpSearch2(void)
 			j = b[j];
 		i++;
 		j++;
-#if 1
+#if 0
 		printf("i:%d\tj:%d\n", i, j);
 #endif
 		if (j == m)
 		{
-#if 1
+#if 0
 			printf("position:%d\n", i - j);
 #endif
 			j = b[j];
 		}
 	}
-#if 1
+#if 0
 	printf("n:%d\n", n);
 #endif
 	return;
